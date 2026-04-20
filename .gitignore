@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment
+.env
+
+# Data residues
+tmp_batch.json
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

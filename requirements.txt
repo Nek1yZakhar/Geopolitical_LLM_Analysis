@@ -1,0 +1,5 @@
+pandas
+plotly
+kaleido
+requests
+python-dotenv
