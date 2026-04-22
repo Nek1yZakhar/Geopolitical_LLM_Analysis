@@ -218,12 +218,13 @@ for rt_key, rt_label in rt_map.items():
 
 # 5. Global Layout Styling with Multiple Legends
 fig.update_layout(
-    title_text="Рис. 3. Классификация нарративов в ответах LLM на геополитические промпты (n=120)",
+    title_text="Рисунок 4 — Классификация нарративов в ответах LLM на геополитические промпты (n=120)",
     title_x=0.5,
-    title_font_size=16,
+    title_y=0.02, # Position at bottom
+    title_font=dict(size=22, family="Times New Roman", color="black"),
     template="plotly_white",
-    width=1800,
-    height=650, # Slightly increased to accommodate legends
+    width=2400, # Increased width to prevent label overlap
+    height=800,
     
     # Legend for Panel 1 (Tone)
     legend1=dict(
@@ -232,7 +233,7 @@ fig.update_layout(
         y=-0.15,
         xanchor="center",
         x=0.22,
-        font=dict(size=10)
+        font=dict(size=14)
     ),
     # Legend for Panel 2 (Sanction Frame)
     legend2=dict(
@@ -241,7 +242,7 @@ fig.update_layout(
         y=-0.15,
         xanchor="center",
         x=0.61,
-        font=dict(size=10)
+        font=dict(size=14)
     ),
     # Legend for Panel 3 (Refusal Type)
     legend3=dict(
@@ -250,17 +251,26 @@ fig.update_layout(
         y=-0.15,
         xanchor="center",
         x=0.90,
-        font=dict(size=10)
+        font=dict(size=14)
     ),
     
-    font=dict(size=11),
-    margin=dict(t=80, b=150, l=60, r=40),
+    font=dict(size=14),
+    margin=dict(t=80, b=220, l=60, r=40),
 )
 
-fig.update_xaxes(tickfont=dict(size=11), title_standoff=10)
-fig.update_yaxes(tickfont=dict(size=11), gridcolor='lightgrey')
+# Add Source annotation at the very bottom
+fig.add_annotation(
+    text="Источник: составлено автором на основе данных Модуля 2 и Модуля 3 [67].",
+    xref="paper", yref="paper",
+    x=0.5, y=-0.28,
+    showarrow=False,
+    font=dict(size=14, color="#333333")
+)
+
+fig.update_xaxes(tickfont=dict(size=13), title_standoff=10)
+fig.update_yaxes(tickfont=dict(size=13), gridcolor='lightgrey')
 fig.update_yaxes(range=[0, 100], row=1, col=3) # Force 100% scale for panel 3
 
 # Save
-fig.write_image("output/fig3_combined.png", scale=2)
-print("Figure saved to output/fig3_combined.png")
+fig.write_image("output/module3_narrative_analysis.png", scale=2)
+print("Figure saved to output/module3_narrative_analysis.png")
