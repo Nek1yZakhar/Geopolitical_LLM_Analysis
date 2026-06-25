@@ -42,9 +42,9 @@
 *   **`data/module1/` (ХроноБД):** База данных санкционных пакетов и релизов китайских моделей (2019–2026). Содержит расчеты инновационных лагов.
 *   **`data/module2/` (API-опрос):** Протоколы и результаты опроса ведущих LLM (DeepSeek-V3, Qwen3, Kimi K2, GPT-5, Gemini) по 12 геополитическим темам.
 *   **`data/module3/` (Классификация и аудит):** Результаты автоматизированной классификации ответов по тональности, фреймингу санкций и типам отказа.
-*   **`src/module1/`:** Скрипты для сбора данных санкций и моделей, расчета инновационных лагов и построения базовой временной шкалы ([timeline_builder.py](file:///c:/Users/Admin/Desktop/Geopolitical_LLM_Analysis/src/module1/timeline_builder.py), [visualize.py](file:///c:/Users/Admin/Desktop/Geopolitical_LLM_Analysis/src/module1/visualize.py)).
-*   **`src/module2/`:** Программный интерфейс для автоматизированного API-опроса выбранных LLM с использованием OpenRouter API ([main.py](file:///c:/Users/Admin/Desktop/Geopolitical_LLM_Analysis/src/module2/main.py)).
-*   **`src/module3/`:** Программный комплекс на Python для обработки данных, проведения аудита ([audit_data.py](file:///c:/Users/Admin/Desktop/Geopolitical_LLM_Analysis/src/module3/audit_data.py)), классификации ([classifier.py](file:///c:/Users/Admin/Desktop/Geopolitical_LLM_Analysis/src/module3/classifier.py)) и генерации аналитических визуализаций ([visualize.py](file:///c:/Users/Admin/Desktop/Geopolitical_LLM_Analysis/src/module3/visualize.py)).
+*   **`src/module1/`:** Скрипты для сбора данных санкций и моделей, расчета инновационных лагов и построения базовой временной шкалы (`timeline_builder.py`, `visualize.py`).
+*   **`src/module2/`:** Программный интерфейс для автоматизированного API-опроса выбранных LLM с использованием OpenRouter API (`main.py`).
+*   **`src/module3/`:** Программный комплекс на Python для обработки данных, проведения аудита (`audit_data.py`), классификации (`classifier.py`) и генерации аналитических визуализаций (`visualize.py`).
 *   **`output/`:** Итоговые графические отчеты и визуализированные результаты исследования.
 *   **`docs/BIBLIOGRAPHY.md`:** Исчерпывающий список источников и литературы.
 
